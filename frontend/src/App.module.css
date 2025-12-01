@@ -1,0 +1,337 @@
+/* This is a CSS Module. 
+   These class names are scoped locally to App.jsx */
+
+.container {
+  min-height: 100vh;
+  height: 200vh;
+  width: 100vw;
+  background-color: #f9fafb; /* A light gray, like bg-gray-50 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-size: 3rem; /* text-5xl */
+  font-weight: 700;
+  color: #111827; /* text-gray-900 */
+}
+
+.subtitle {
+  font-size: 1.125rem; /* text-lg */
+  color: #4b5563; /* text-gray-600 */
+  margin-top: 0.5rem;
+}
+
+.journalForm {
+  width: 100%;
+  max-width: 32rem; /* max-w-lg */
+}
+
+.journalLabel {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1f2937; /* text-gray-800 */
+}
+
+.journalTextarea {
+  width: 100%;
+  height: 10rem; /* h-40 */
+  padding: 0.75rem;
+  border: 1px solid #d1d5db; /* border-gray-300 */
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.journalTextarea:focus {
+  outline: none;
+  border-color: #3b82f6; /* ring-blue-500 */
+  box-shadow: 0 0 0 2px #bfdbfe; /* ring-2 */
+}
+
+.analyzeButton {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 500;
+  background-color: #2563eb; /* bg-blue-600 */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.analyzeButton:hover {
+  background-color: #1d4ed8; /* hover:bg-blue-700 */
+}
+
+.analyzeButton:disabled {
+  background-color: #9ca3af; /* bg-gray-400 */
+  cursor: not-allowed;
+}
+
+.error {
+  margin-top: 1rem;
+  color: #dc2626; /* text-red-600 */
+  font-weight: 500;
+}
+
+.moodDisplay {
+  width: 100%;
+  max-width: 48rem; /* max-w-lg */
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0.75rem; /* rounded-xl */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1); /* shadow-lg */
+  border-top-width: 4px;
+}
+
+.moodTitle {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.moodSummary {
+  color: #374151; /* text-gray-700 */
+}
+
+/* ... (all your existing styles) ... */
+
+.statsContainer {
+  width: 100%;
+  max-width: 48rem; /* max-w-lg */
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background-color: #d5d7d9; /* bg-gray-100 */
+  border-radius: 0.75rem; /* rounded-xl */
+  border: 1px solid #e5e7eb; /* border-gray-200 */
+}
+
+.statsTitle {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 600;
+  color: #1f2937; /* text-gray-800 */
+  margin-bottom: 1rem;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  font-size: 0.875rem; /* text-sm */
+  color: #4b5563; /* text-gray-600 */
+}
+
+.statsGrid span strong {
+  color: #111827; /* text-gray-900 */
+  font-weight: 600;
+  font-size: 1.125rem; /* text-lg */
+  display: block;
+}
+
+.stressLevel {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151; /* text-gray-700 */
+}
+
+.stressLevel strong {
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-left: 0.5rem;
+}
+.voiceContainer {
+  width: 100%;
+  max-width: 48rem; /* max-w-lg */
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0.75rem; /* rounded-xl */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1); /* shadow-lg */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.voiceButton {
+  background-color: #ef4444; /* bg-red-500 */
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.voiceButton:hover {
+  background-color: #dc2626; /* bg-red-600 */
+}
+
+.voiceButton:disabled {
+  background-color: #9ca3af; /* bg-gray-400 */
+  cursor: not-allowed;
+}
+
+.voiceResult {
+  margin-top: 1rem;
+  font-size: 1.125rem; /* text-lg */
+  color: #1f2937; /* text-gray-800 */
+}
+
+.voiceResult strong {
+  text-transform: capitalize;
+  font-weight: 700;
+  color: #1d4ed8; /* blue-700 */
+}
+
+.modalOverlay {
+  position: fixed; /* Sit on top of the page content */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Make sure it's on top */
+  backdrop-filter: blur(4px); /* Optional: blur background */
+}
+
+.modalContent {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.75rem; /* rounded-xl */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.modalTitle {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 600;
+  color: #1f2937; /* text-gray-800 */
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.modalText {
+  font-size: 1rem;
+  color: #4b5563; /* text-gray-600 */
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.modalButton {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  color: rgb(223, 30, 30);
+  font-weight: 500;
+  font-size: 1rem;
+  background-color: #2563eb; /* bg-blue-600 */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.modalButton:hover {
+  background-color: #1d4ed8; /* hover:bg-blue-700 */
+}
+.dashboardContainer {
+  width: 100%;
+  max-width: 80rem; /* max-w-3xl, wider than other elements */
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0.75rem; /* rounded-xl */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1); /* shadow-lg */
+}
+
+.dashboardTitle {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700;
+  color: #111827; /* text-gray-900 */
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.chartsGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+/* On medium screens and up, show charts side-by-side */
+@media (min-width: 768px) {
+  .chartsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.chartBox {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #e5e7eb; /* border-gray-200 */
+  border-radius: 0.5rem;
+}
+
+.chartBox h3 {
+  text-align: center;
+  margin-top: 0;
+  color: #374151; /* text-gray-700 */
+  font-weight: 600;
+}
+
+.activityBox {
+  margin-top: 2rem;
+}
+
+.activityBox h3 {
+  font-size: 1.25rem;
+  color: #374151; /* text-gray-700 */
+  font-weight: 600;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.activityBox ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.activityBox li {
+  font-size: 0.875rem; /* text-sm */
+  color: #4b5563; /* text-gray-600 */
+  padding: 0.5rem 0.25rem;
+  border-bottom: 1px solid #f3f4f6; /* border-gray-100 */
+}
+
+.activityBox li strong {
+  color: #1f2937; /* text-gray-800 */
+}
