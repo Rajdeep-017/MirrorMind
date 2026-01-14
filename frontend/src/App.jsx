@@ -644,7 +644,7 @@ function VoiceRecorder() {
     formData.append("file", audioBlob, "recording.webm");
 
     try {
-      const response = await fetch("http://localhost:8000/analyze-voice/", {
+      const response = await fetch("https://mirrormind-8dy0.onrender.com/analyze-voice/", {
         method: 'POST',
         body: formData,
       });
@@ -926,7 +926,7 @@ export default function App() {
     setAnalysis(null);
 
     try {
-      const response = await fetch("http://localhost:8000/analyze-mood/", {
+      const response = await fetch("https://mirrormind-8dy0.onrender.com/analyze-mood/", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
