@@ -33,7 +33,7 @@ origins = [
 ]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],  # CHANGE THIS: Allow all origins (easiest for deployment)
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -66,7 +66,7 @@ class VoiceResponse(BaseModel):
     error: str | None = None
 
 # --- Phase 3: New Endpoint for Voice Analysis ---
-@app.post("/analyze-voice/", response_model=VoiceResponse)
+@app.post("/analyze-voice", response_model=VoiceResponse)
 async def analyze_voice(file: UploadFile = File(...)):
     """
     Analyzes the emotion of an audio file.
